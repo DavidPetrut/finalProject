@@ -1,0 +1,236 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Project API</title>
+        <meta name="description" content="AJAX/PHP/CURL/JSON">
+  
+        
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="../myProject/libs/css/main.css">
+        <link rel="stylesheet" href="../myProject/libs/css/weather.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      
+
+    </head>
+
+    <body>
+
+        <div id=”preloader”></div>
+        <!-- ---------This is a Neighbourhood API----------- -->
+
+
+        <h1>This API will show you famous U.S Neighbourhood by coordinates</h1>
+        <br>
+        <select class="select" id="lat">
+            <option value="40.78343">New York - lat</option>
+            <option value="34.05223">Los Angeles - lat</option>
+            <option value="41.85003">Chicago - lat</option>
+            <option value="42.35843">Boston - lat</option>
+        </select>
+
+        <select class="select" id="lng">
+            <option value="-73.96625">New York - lng</option>
+            <option value="-118.24368">Los Angeles - lng</option>
+            <option value="-87.65005">Chicago - lng</option>
+            <option value="-71.05977">Boston - lng</option>
+        </select>
+
+        <button class="BUTTON" id="BUTTON1">START</button>
+
+        <br><br>
+
+        <div id="divResults">
+            
+            <table class="table">
+
+
+                <tr class="table-primary">
+                    <td class="table-primary" class="td_1">country Code:  </td>
+                    <td class="table-primary" id="firstName"></td>    
+
+                </tr>
+
+                <tr class="table-secondary">
+                    <td class="table-secondary" class="td_1">City:</td> 
+                    <td class="table-secondary" id="secondName"></td>    
+
+                </tr>
+
+                <tr class="table-success">
+                    <td class="table-success" class="td_1">Country Short Name: </td>
+                    <td class="table-success" id="thirName"></td>    
+
+                </tr>
+
+                <tr class="table-danger">
+                    <td class="table-danger" class="td_1">neighbourhood: </td>
+                    <td class="table-danger" id="fourthName"></td>    
+
+                </tr>
+
+                <tr class="table-warning">
+                    <td class="table-warning" class="td_1">State: </td>
+                    <td class="table-warning" id="fifthName"></td>    
+
+                </tr>
+
+
+            </table>
+
+        </div>
+
+        <br><br>
+             <!-- ---------This is the Sibling API----------- -->
+
+
+
+             <h1>Chose a country to see it`s neighbour</h1>
+             <br>
+             <select class="select" id="geonameId">
+                 <option value="2782113">Austria</option>
+                 <option value="3017382">France</option>
+                 <option value="2921044">Germany</option>
+                 <option value="617790">Moldova</option>
+                 <option value="3194884">Montenegro</option>
+                 <option value="3144096">Norway</option>
+                 <option value="2017370">Russian </option>
+             </select>
+     
+             <button class="BUTTON" id="BUTTON2">START</button>
+     
+             <br><br>
+     
+             <div id="divResults">
+                 
+                 <table class="table">
+     
+                     <tr class="table-primary">
+                         <td class="table-primary" class="td_1">latitude : </td> 
+                         <td class="table-primary" id="lati"></td>
+      
+                     </tr>
+     
+                     <tr class="table-secondary">
+                         <td class="table-secondary" class="td_1">longitude:  </td>
+                         <td class="table-secondary" id="lngi"></td>    
+     
+                     </tr>
+     
+                     <tr class="table-success">
+                         <td class="table-success" class="td_1">countryCode:</td> 
+                         <td class="table-success" id="countryCode"></td>    
+     
+                     </tr>
+     
+                     <tr class="table-danger">
+                         <td class="table-danger" class="td_1">countryName: </td>
+                         <td class="table-danger" id="countryName"></td>    
+     
+                     </tr>
+                     <tr class="table-warning">
+                         <td class="table-warning" class="td_1">toponymName:</td> 
+                         <td class="table-warning" id="toponymName"></td>     
+     
+                     </tr>
+     
+                 </table>
+     
+             </div> 
+            
+             <br><br><br>
+
+
+
+
+
+
+                   <!-- ---------This is a streetName API----------- -->
+
+
+        <h1>This API will show you historical cities from Austria</h1>
+        <br>
+        <select class="select" id="q">
+            <option value="Museum">Museum</option>
+            <option value="Operngasse">Operngasse </option>
+            <option value="Altgasse">Altgasse</option>
+        </select>
+
+
+        <button class="BUTTON" id="button">START</button>
+
+        <br><br>
+
+        <div id="divResults">
+            
+            <table class="table">
+
+
+                <tr class="table-primary">
+                    <td class="table-primary" class="td_1">locality:  </td>
+                    <td class="table-primary" id="locality"></td>    
+
+                </tr>
+
+                <tr class="table-secondary">
+                    <td class="table-secondary" class="td_1">countryCode:</td> 
+                    <td class="table-secondary" id="countryCodex"></td>    
+
+                </tr>
+
+                <tr class="table-success">
+                    <td class="table-success" class="td_1">City: </td>
+                    <td class="table-success" id="adminName1"></td>    
+
+                </tr>
+
+                <tr class="table-danger">
+                    <td class="table-danger" class="td_1">number: </td>
+                    <td class="table-danger" id="adminCode1"></td>    
+
+                </tr>
+
+                <tr class="table-warning">
+                    <td class="table-warning class="td_1"">street: </td>
+                    <td class="table-warning" id="street"></td>    
+
+                </tr>
+
+
+            </table>
+
+        </div>
+
+
+             
+        
+        
+        <!-- ------ this is a jquery only API  --- -->
+        
+        
+        
+        
+        <br><br><br>
+        <h1>This is a JQUERY - only API</h1>
+
+            <div class="weather-container">
+                <img src="" alt="" class="icon">
+                <p class="weather">London Today's weather:  </p>
+                <p class="temp">London temperature in celsius:  </p>
+            </div>
+
+
+        <script  src="libs/js/jquery.js"></script>
+        <script  src="libs/js/siblings.js"></script>
+        <script  src="libs/js/timezone.js"></script>
+        <script src="libs/js/weather.js"></script>
+        <script src="libs/js/streetName.js"></script>
+        <script src="libs/js/main.js"></script>
+
+    </body>
+
+</html>
+
